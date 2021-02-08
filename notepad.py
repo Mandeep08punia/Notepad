@@ -13,9 +13,8 @@ def newFile():
 
 def openFile():
     global file
-    file = askopenfilename(defaultextension=".txt",
-                           filetypes=[("All Files", "*.*"),
-                                      ("Text Documents", "*.txt")])
+    file = askopenfilename(defaultextension=".txt",filetypes=[("All Files", "*.*"),("Text Documents", "*.txt")])
+    
     if file == "":
         file = None
     else:
@@ -29,9 +28,8 @@ def openFile():
 def saveFile():
     global file
     if file == None:
-        file = asksaveasfilename(initialfile='Untitled.txt', defaultextension=".txt",
-                                 filetypes=[("All Files", "*.*"),
-                                            ("Text Documents", "*.txt")])
+        file = asksaveasfilename(initialfile='Untitled.txt', defaultextension=".txt",filetypes=[("All Files", "*.*"),("Text Documents", "*.txt")])
+        
         if file == "":
             file = None
 
@@ -74,7 +72,7 @@ if __name__ == '__main__':
     # Basic tkinter setup
     root = Tk()
     root.title("Untitled - Notepad")
-    root.wm_iconbitmap("image/MyAvatar.png")
+    
     root.geometry("644x644")
 
     # Add TextArea
